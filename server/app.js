@@ -12,7 +12,7 @@ var swig = require('swig');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
-var tatum = require('.routes.api.js');
+var tatums = require('./routes/api.js');
 
 
 // *** express instance *** //
@@ -38,9 +38,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 
+
 // *** main routes *** //
 app.use('/', routes);
-api.use('/api/', tatums);
+app.use('/api/', tatums);
 
 
 // catch 404 and forward to error handler
