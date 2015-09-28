@@ -1,4 +1,6 @@
 // *** main dependencies *** //
+var dotenv = require('dotenv');
+dotenv.load();
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -10,10 +12,12 @@ var swig = require('swig');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
+var tatum = require('.routes.api.js');
 
 
 // *** express instance *** //
 var app = express();
+
 
 
 // *** view engine *** //
@@ -36,6 +40,7 @@ app.use(express.static(path.join(__dirname, '../client/public')));
 
 // *** main routes *** //
 app.use('/', routes);
+api.use('/api/', tatums);
 
 
 // catch 404 and forward to error handler
