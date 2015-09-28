@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var Tatum = new Schema({
   movies:String,
   year:Number,
-  checkFlick:Boolean
+  chickFlick:Boolean
 });
 
 
