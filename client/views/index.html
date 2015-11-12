@@ -6,18 +6,40 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body ng-controller="TatumController">
+  <body ng-controller="tatumController">
 
+
+
+
+
+<form role="form" ng-submit='postMovie()'>
+     <div class="form-group">
+       <label>Movie:</label>
+       <input ng-model="movieName" type="text" class="form-control" id="movie">
+     </div>
+     <div class="form-group">
+       <label>Year:</label>
+       <input ng-model="year" type="text" class="form-control" id="year">
+     </div>
+     <div class="checkbox">
+       <label><input ng-model="chickFlick" type="checkbox"> Chick Flick</label>
+     </div>
+     <button type="submit" class="btn btn-default">Submit</button>
+   </form>
+
+
+  <!-- <div ng-views>
+
+  </div> -->
 
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script src="./js/app.js" type="text/javascript"></script>
-    <script src="./js/controllers.js" type="text/javascript"></script>
-    <script src="./js/directives.js" type="text/javascript"></script>
-    <script src="./js/filters.js" type="text/javascript"></script>
-    <script src="./js/services.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/controller.js" type="text/javascript"></script>
+    <script src="js/directives.js" type="text/javascript"></script>
+    <script src="js/filters.js" type="text/javascript"></script>
+    <script src="js/services.js" type="text/javascript"></script>
   </body>
 </html>

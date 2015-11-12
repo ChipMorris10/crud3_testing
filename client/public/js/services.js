@@ -1,4 +1,4 @@
-app.factory("httpFactory", ['$http', function($http){
+app.factory("myFactory", ['$http', function($http){
   var obj = {};
   // get request
   obj.getAll = function(url) {

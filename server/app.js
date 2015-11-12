@@ -7,11 +7,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-// var swig = require('swig');
+// var swig = require('swig');     // remove Swig because we're using Angular
 
 
 // *** routes *** //
-var routes = require('./routes/index.js');
+// var routes = require('./routes/index.js');   // comment out
 var tatums = require('./routes/api.js');
 
 
@@ -22,7 +22,7 @@ var app = express();
 
 // // *** view engine *** //
 // var swig = new swig.Swig();
-// app.engine('html', swig.renderFile);
+// app.engine('html', swig.renderFile);     // remove all the Swig code
 // app.set('view engine', 'html');
 
 
@@ -40,11 +40,11 @@ app.use(express.static(path.join(__dirname, '../client/public')));
 
 
 // *** main routes *** //
-app.use('/', routes);
-app.use('/api/', tatums);
-app.use('/',function(req, res){
+// app.use('/', routes);
+app.use('/api', tatums);
+app.get('/',function(req, res){
   res.sendFile(path.join(__dirname,'../client/views', 'index.html'));
-});
+});                                                                 // WHAT DOES THIS DO
 
 
 // catch 404 and forward to error handler
